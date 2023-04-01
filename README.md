@@ -14,6 +14,11 @@ This is taken care of by `calc_overlaps.py` script. It needs [Homo sapiens assem
 ## Paralogue analysis step
 `Paralogs.ipynb` and `Mouse-Ensembl.ipynb` need to be evaluated.
 
+### Inputs
+* `hsapiens.Pairs.Strict.2R.txt` extracted from ohno-db
+* Transcription factor data from Cistrome DB
+* Gene expression data from GTex (for homo sapiens) and BodyMap (for mus musculus)
+
 ### Outputs of this step
 * `paralogs-export.pkl`
 * `mouse-export.pkl`
