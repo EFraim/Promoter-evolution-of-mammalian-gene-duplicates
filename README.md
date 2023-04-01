@@ -11,6 +11,12 @@ Scripts, figures and source code for "Promoter evolution of mammalian gene dupli
 ## Calculating CpG overlaps 
 This is taken care of by `calc_overlaps.py` script. It needs [Homo sapiens assembly](https://ftp.ensembl.org/pub/release-98/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz) and [Mus musculus assembly](https://ftp.ensembl.org/pub/release-98/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.primary_assembly.fa.gz)
 
+## Produce reduced paralogue set
+The procedure is useful not to overcount paralogs belonging to large families in various analysis. Each paralogue should be counted for single duplication event, hence for a family of n paralogs, n-1 representatives need to be picked, not n(n-1)/2.
+
+1. Run `fetch-human-paras.pl | only_adj_paralogs.py ENSG0 > hum-paras.csv `
+2. Run `fetch-mouse-paras.pl | only_adj_paralogs.py ENSMUS > mus-paras.csv `
+
 ## Paralogue analysis step
 `Paralogs.ipynb` and `Mouse-Ensembl.ipynb` need to be evaluated.
 
